@@ -6,11 +6,10 @@ public class Hacker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		ShowMainMenu ();
+		ShowMainMenu ( "Hello Hacker" );
 	}
 
-	void ShowMainMenu () {
-		var greeting = "Hello Hacker";
+	void ShowMainMenu (string greeting) {
 		Terminal.ClearScreen();
 		Terminal.WriteLine(greeting);
 		Terminal.WriteLine("What difficulty would you like?");
@@ -19,8 +18,8 @@ public class Hacker : MonoBehaviour {
 		Terminal.WriteLine("Press 3 for hard");
 	}
 
-	// Update is called once per frame
-	void Update () {
-
+	void OnUserInput(string input)
+	{
+		print(input);
 	}
 }
